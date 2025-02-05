@@ -1,0 +1,554 @@
+/* Global Styles */
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    padding-top: 80px; /* Padding for fixed navbar */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex: 1;
+}
+
+/* Left Section Styles */
+.content-section {
+    display: flex;
+    padding: 50px;
+}
+
+.left-section {
+    width: 50%;
+}
+
+.heading {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0B0D63;
+    margin-top: 150px;
+    margin-left: 30px;
+}
+
+.description {
+    font-size: 18px;
+    color: #000;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-left: 30px;
+}
+
+.image-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    background-color: black;
+    color: #FFF;
+    position: relative;
+    margin-top: auto;
+}
+
+.footer-left {
+    max-width: 400px;
+}
+
+.footer-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.footer-description {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-left: 30px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-contact-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-contact-info {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.footer-contact-info a {
+    color: #FFF;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-contact-info a:hover {
+    opacity: 0.7;
+}
+
+.social-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0B0D63;
+    background-color: #FFF;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: #AC5353;
+    color: #FFF;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #0B0D63;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Three-Step Indicator */
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+}
+
+.step.active {
+    border: 2px solid #AC5353;
+}
+
+.step-circle {
+    width: 30px;
+    height: 30px;
+    background-color: #0B0D63;
+    color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.step-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0B0D63;
+}
+
+/* Consultation Plans */
+.consultation-plans {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.plan {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+}
+
+.plan h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0B0D63;
+    margin-bottom: 10px;
+}
+
+.plan p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.book-btn {
+    background-color: #AC5353;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: #8C3C3C;
+}
+
+
+/* Booking Form Styles */
+.booking-form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+.booking-form-container h2 {
+    font-size: 2rem;
+    color: #0B0D63;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.booking-stages {
+    margin-top: 1rem;
+}
+
+.stage {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.stage.active {
+    display: block;
+    opacity: 1;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.time-slot {
+    padding: 1rem;
+    background-color: #e8f0fe;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.time-slot:hover {
+    background-color: #d1e3ff;
+    transform: translateY(-2px);
+}
+
+.time-slot.selected {
+    background-color: #5C67F2;
+    color: white;
+}
+
+.time-slot.disabled {
+    background-color: #f0f0f0;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.booking-summary {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.modern-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.modern-input:focus {
+    border-color: #5C67F2;
+    outline: none;
+}
+
+.modern-button {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    background-color: #5C67F2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modern-button:hover {
+    background-color: #4a54e1;
+}
+
+
+
+/* Content Section Layout */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 40px; /* Space between left and right sections */
+}
+
+.left-section {
+    width: 50%; /* Left section takes 50% of the width */
+}
+
+.right-section {
+    width: 45%; /* Right section takes 45% of the width */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Booking Form Styles */
+.booking-form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin-top: 180px;
+    max-width: 500px; /* Limit the width of the form */
+}
+
+.booking-form-container h2 {
+    font-size: 1.8rem;
+    color: #0B0D63;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.booking-stages {
+    margin-top: 1rem;
+}
+
+.stage {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.stage.active {
+    display: block;
+    opacity: 1;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.time-slot {
+    padding: 1rem;
+    background-color: #e8f0fe;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.time-slot:hover {
+    background-color: #d1e3ff;
+    transform: translateY(-2px);
+}
+
+.time-slot.selected {
+    background-color: #5C67F2;
+    color: white;
+}
+
+.time-slot.disabled {
+    background-color: #f0f0f0;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.booking-summary {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.modern-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.modern-input:focus {
+    border-color: #5C67F2;
+    outline: none;
+}
+
+.modern-button {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    background-color: #5C67F2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modern-button:hover {
+    background-color: #4a54e1;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 30px; /* Make the bar rounded */
+    margin-bottom: 60px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    border-radius: 10px; /* Make the fill inside the bar rounded */
+    background: linear-gradient(270deg, #e55dd1, #e6ddf3, #877cc9, #6a11cb, #2575fc, #4facfe);
+    background-size: 400% 400%;
+    animation: gradientAnimation 4s ease infinite; /* Gradient animation */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.modern-input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modern-input.valid {
+    border: 1px solid rgb(0, 192, 0); /* Green border for valid input */
+}
+
+.modern-input.invalid {
+    border: 1px solid red; /* Red border for invalid input */
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none; /* Hidden by default */
+}
+
+

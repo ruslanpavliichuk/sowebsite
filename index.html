@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svitlana Osiptsova - Booking</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+    <div class="content-wrapper">
+        <nav class="navbar">
+            <a href="#" class="home-btn">Svitlana Osiptsova</a>
+            <div id="hamburger" class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div id="menu" class="menu">
+                <a href="#" class="menu-btn">Services</a>
+                <a href="#" class="menu-btn">About</a>
+                <a href="#" class="menu-btn">Contact</a>
+                <a href="#" class="book-now-btn">Book Now</a>
+            </div>
+        </nav>
+
+        <section class="content-section">
+            <div class="left-section">
+                <h1 class="heading">Schedule time with me</h1>
+                <p class="description">
+                    Ready to take the first step towards understanding yourself better? 
+                    Our friendly team is here to help you book an appointment, offering 
+                    guidance and support every step of the way.
+                </p>
+                <div class="image-container">
+                    <img src="assets/image1.jpg" alt="Therapist session illustration" class="image">
+                </div>
+            </div>
+
+            
+            <div class="right-section">
+                <div class="booking-form-container">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>                    
+                    <h2>Book a Session</h2>
+                    <div class="booking-stages">
+                        <div id="stage1" class="stage active">
+                            <h3>Select Date and Time</h3>
+                            <div class="calendar-container">
+                                <input type="date" id="datePicker" class="modern-input">
+                            </div>
+                            <div id="timeSlots" class="time-slots-grid"></div>
+                        </div>
+
+                        <div id="stage2" class="stage">
+                            <h3>Your Details</h3>
+
+                            <input type="text" id="name" class="modern-input" placeholder="Name">
+                            <span class="error-message" id="name-error"></span>
+
+                            <input type="text" id="surname" class="modern-input" placeholder="Surname">
+                            <span class="error-message" id="surname-error"></span>
+
+                            <input type="tel" id="phone" class="modern-input" placeholder="Phone Number (Optional)">
+                            <span class="error-message" id="phone-error"></span>
+
+                            <input type="email" id="email" class="modern-input" placeholder="Email">
+                            <span class="error-message" id="email-error"></span>
+
+                            <button class="modern-button" onclick="submitDetails()">Submit Details</button>
+                            <button class="modern-button" onclick="goBackToStage1()">Back to Date and Time</button>
+                        </div>
+
+                        <div id="stage3" class="stage">
+                            <h3>Booking Confirmed</h3>
+                            <p>Your booking has been successfully scheduled.</p>
+                            <div id="bookingSummary" class="booking-summary"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="height: 300px;"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <h2 class="footer-name">Svitlana Osiptsova</h2>
+            <p class="footer-description">
+                Empowering individuals through personalized guidance and support. 
+                Let’s work together to achieve your goals.
+            </p>
+        </div>
+        <div class="footer-right">
+            <h2 class="footer-contact-title">Contact</h2>
+            <p class="footer-contact-info">
+                Email: <a href="mailto:example@gmail.com">example@gmail.com</a><br>
+                Phone: <a href="tel:+44000000000000">+44000000000000</a>
+            </p>
+            <a href="https://osiptsova.taplink.ws/" class="social-btn">Social</a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

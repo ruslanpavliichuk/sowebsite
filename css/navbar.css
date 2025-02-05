@@ -1,0 +1,158 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-right: 70px;
+    z-index: 1001;
+    width: 30px;
+    height: 20px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.hamburger .line {
+    width: 100%;
+    height: 3px;
+    background-color: #0B0D63;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active .line {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.home-btn {
+    color: #0B0D63;
+    font-family: Manrope, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.home-btn:hover {
+    color: #AC5353;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-btn {
+    color: #0B0D63;
+    font-family: Manrope, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    margin-right: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.menu-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #AC5353;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease-out;
+}
+
+.menu-btn:hover::after {
+    transform: scaleX(1);
+}
+
+.menu-btn:hover {
+    color: #AC5353;
+}
+
+.book-now-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #AC5353;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease-out;
+}
+
+.book-now-btn:hover::after {
+    display: none;
+}
+
+.book-now-btn:hover {
+    color: #AC5353;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+        gap: 10px;
+    }
+
+    .menu a {
+        padding: 10px;
+        text-align: center;
+        display: block;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background-color: #0B0D63;
+        margin: 5px;
+    }
+}
